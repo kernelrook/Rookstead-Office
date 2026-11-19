@@ -1,0 +1,24 @@
+{
+  "name": "rookstead-office",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "bun@1.4.4",
+  "scripts": {
+    "dev": "bun --bun vite",
+    "build": "bun run typecheck && bun --bun vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test src",
+    "check:privacy": "python3 scripts/check-privacy.py"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "vite": "8.3.8",
+    "typescript": "7.0.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0"
+  }
+}
