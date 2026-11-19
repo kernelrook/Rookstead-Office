@@ -1,0 +1,29 @@
+.launcher-popover {
+ position:fixed; z-index:60; width:min(364px,calc(100vw - 16px)); box-sizing:border-box;
+ overflow:auto; overscroll-behavior:contain; padding:10px;
+ color:var(--ink); background:var(--surface); border:1px solid var(--line);
+ border-radius:10px; box-shadow:0 12px 32px #0006; container-type:inline-size;
+ --launcher-focus:var(--muted);
+}
+.launcher-search {
+ display:flex; align-items:center; gap:10px; padding:0 11px; margin:2px 2px 8px;
+ border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--muted);
+ cursor:text;
+}
+.launcher-search:focus-within {outline:2px solid var(--launcher-focus); outline-offset:-2px}
+.launcher-search svg {width:16px; height:16px; flex:none}
+.launcher-search input {min-width:0; min-height:42px; padding:8px 0; font-size:16px; border:0; background:transparent; border-radius:0}
+.launcher-search input:focus {outline:none}
+.launcher-grid {display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:4px}
+.launcher-tile {
+ display:flex; flex-direction:column; align-items:center; text-align:center; gap:7px;
+ min-width:0; min-height:76px; padding:8px 4px; border-radius:6px;
+ font-size:12px; line-height:1.25; overflow-wrap:anywhere;
+}
+.launcher-tile:hover,.launcher-tile:focus-visible {background:var(--hover)}
+.launcher-tile:focus-visible {outline:2px solid var(--launcher-focus); outline-offset:-2px}
+.launcher-tile .mini-mark {width:34px;height:34px;font-size:15px;font-family:inherit;font-weight:600;background:var(--hover);color:var(--ink)}
+.launcher-empty {color:var(--muted);font-size:13px;padding:9px 4px}
+.managed-apps{border-top:1px solid var(--line)}.managed-app{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);padding:5px 0;min-height:48px}.managed-app strong{flex:1;min-width:0;overflow-wrap:anywhere}.managed-app .icon-button{width:44px;height:44px;flex-shrink:0}.settings-app-actions{display:flex;align-items:center;justify-content:flex-start;margin-bottom:12px}.settings-suggestions{margin-top:16px}.settings-suggestions summary{cursor:pointer;color:var(--muted);min-height:44px;align-content:center}
+@media (max-width: 520px){.launcher-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@container (max-width: 200px){.launcher-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
